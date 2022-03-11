@@ -1,12 +1,13 @@
 #Create file path to use throughout code where you would like to output .csv files to
-filepath="C:/Users/tdtibbet/Desktop/"
+##Get path directory where this script is saved using rstudioapi package
+filepath <- dirname(rstudioapi::getActiveDocumentContext()$path)
 #Use file.remove if you would like to delete the previously made .csv doc (so you can use the same name for new file)
-# file.remove(paste(filepath,"RMediationErrorsStudy2.csv", sep =""))
-# file.remove(paste(filepath,"MacKinnon2004SummaryInformationStudy2.csv", sep =""))
-# file.remove(paste(filepath,"MacKinnon200495PercentAccuracySummaryStudy2.csv", sep =""))
-# file.remove(paste(filepath,"MacKinnon200490PercentAccuracySummaryStudy2.csv", sep =""))
-# file.remove(paste(filepath,"MacKinnon200480PercentAccuracySummaryStudy2.csv", sep =""))
-# file.remove(paste(filepath,"MacKinnon2004RejectRateSummaryStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/RMediationErrorsStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/MacKinnon2004SummaryInformationStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/MacKinnon200495PercentAccuracySummaryStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/MacKinnon200490PercentAccuracySummaryStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/MacKinnon200480PercentAccuracySummaryStudy2.csv", sep =""))
+# file.remove(paste(filepath,"/MacKinnon2004RejectRateSummaryStudy2.csv", sep =""))
 
 #Load required packages
 library(RMediation) #RMediation is required for medci() function
@@ -88,13 +89,13 @@ for (h in 1: length(ns)) {
       #If RMediation cannot calculate CI, output values that generated the error to .csv file and redo the iteration
       if (NA %in% rmedCI95$`97.5% CI`) {
         write.table(data.frame(mu.x=a, se.x=astderr, mu.y=b, se.y=bstderr, rho=0, alpha=alpha[1]), 
-                    file = paste(filepath,"RMediationErrorsStudy2.csv", sep =""),
+                    file = paste(filepath,"/RMediationErrorsStudy2.csv", sep =""),
                     append=TRUE, sep = ",",
                     quote = FALSE,
                     row.names=FALSE,
                     col.names=FALSE)
         i=i-1
-      #Else, continue the simulation as normal
+        #Else, continue the simulation as normal
       } else {
         #Generate 90% and 80% CIs using RMediation package
         rmedCI90=medci(mu.x=a, se.x=astderr, mu.y=b, se.y=bstderr, rho=0, alpha=alpha[2], type="dop")
@@ -378,7 +379,7 @@ summaryinformation=as.data.frame(summaryinformation)
 colnames(summaryinformation)=c("n", "a", "b", "average sample a", "average sample b", 
                                "empirical standard error of sample a", "empirical standard error of sample b",
                                "average sample std error of a", "average sample std error of b")
-write.table(summaryinformation, file = paste(filepath,"MacKinnon2004SummaryInformationStudy2.csv", sep =""),
+write.table(summaryinformation, file = paste(filepath,"/MacKinnon2004SummaryInformationStudy2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -387,11 +388,11 @@ write.table(summaryinformation, file = paste(filepath,"MacKinnon2004SummaryInfor
 #Convert results matrices to dataframes and write to .csv files
 accursum95=as.data.frame(accursum95)
 colnames(accursum95)=c("n", "a", "b", "ab", 
-                     "z proportion below", "M proportion below", "jackknife proportion below", "percentile boot proportion below",
-                     "bias-corrected boot proportion below", "boot-t proportion below", "boot-Q proportion below", "Monte Carlo proportion below",
-                     "z proportion above", "M proportion above", "jackknife proportion above", "percentile boot proportion above",
-                     "bias-corrected boot proportion above", "boot-t proportion above", "boot-Q proportion above", "Monte Carlo proportion above")
-write.table(accursum95, file = paste(filepath,"MacKinnon200495PercentAccuracySummaryStudy2.csv", sep =""),
+                       "z proportion below", "M proportion below", "jackknife proportion below", "percentile boot proportion below",
+                       "bias-corrected boot proportion below", "boot-t proportion below", "boot-Q proportion below", "Monte Carlo proportion below",
+                       "z proportion above", "M proportion above", "jackknife proportion above", "percentile boot proportion above",
+                       "bias-corrected boot proportion above", "boot-t proportion above", "boot-Q proportion above", "Monte Carlo proportion above")
+write.table(accursum95, file = paste(filepath,"/MacKinnon200495PercentAccuracySummaryStudy2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -403,7 +404,7 @@ colnames(accursum90)=c("n", "a", "b", "ab",
                        "bias-corrected boot proportion below", "boot-t proportion below", "boot-Q proportion below", "Monte Carlo proportion below",
                        "z proportion above", "M proportion above", "jackknife proportion above", "percentile boot proportion above",
                        "bias-corrected boot proportion above", "boot-t proportion above", "boot-Q proportion above", "Monte Carlo proportion above")
-write.table(accursum90, file = paste(filepath,"MacKinnon200490PercentAccuracySummaryStudy2.csv", sep =""),
+write.table(accursum90, file = paste(filepath,"/MacKinnon200490PercentAccuracySummaryStudy2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -415,7 +416,7 @@ colnames(accursum80)=c("n", "a", "b", "ab",
                        "bias-corrected boot proportion below", "boot-t proportion below", "boot-Q proportion below", "Monte Carlo proportion below",
                        "z proportion above", "M proportion above", "jackknife proportion above", "percentile boot proportion above",
                        "bias-corrected boot proportion above", "boot-t proportion above", "boot-Q proportion above", "Monte Carlo proportion above")
-write.table(accursum80, file = paste(filepath,"MacKinnon200480PercentAccuracySummaryStudy2.csv", sep =""),
+write.table(accursum80, file = paste(filepath,"/MacKinnon200480PercentAccuracySummaryStudy2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -423,9 +424,9 @@ write.table(accursum80, file = paste(filepath,"MacKinnon200480PercentAccuracySum
 
 rejectratesum=as.data.frame(rejectratesum)
 colnames(rejectratesum)=c("n", "a", "b", "ab", 
-                           "z reject rate", "M reject rate", "jackknife reject rate", "percentile boot reject rate",
-                           "bias-corrected boot reject rate", "boot-t reject rate", "boot-Q reject rate", "Monte Carlo reject rate")
-write.table(rejectratesum, file = paste(filepath,"MacKinnon2004RejectRateSummaryStudy2.csv", sep =""),
+                          "z reject rate", "M reject rate", "jackknife reject rate", "percentile boot reject rate",
+                          "bias-corrected boot reject rate", "boot-t reject rate", "boot-Q reject rate", "Monte Carlo reject rate")
+write.table(rejectratesum, file = paste(filepath,"/MacKinnon2004RejectRateSummaryStudy2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
