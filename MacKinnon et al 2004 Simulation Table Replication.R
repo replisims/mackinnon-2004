@@ -1,6 +1,9 @@
+#Create file path to use throughout code where you would like to call .csv files
+##Get path directory where this script is saved using rstudioapi package
+filepath <- dirname(rstudioapi::getActiveDocumentContext()$path)
 ##############################Table 1##############################
 #Read in .csv file
-study1=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon2004AccuracySummaryStudy1.csv")
+study1=read.csv(paste(filepath, "/MacKinnon2004AccuracySummaryStudy1.csv", sep =""))
 #Keep only cases where a path is zero
 study1out=study1[study1$a==0,]
 #Remove ab column
@@ -15,9 +18,9 @@ wide = unite(wide,  col = M, 5, 6, sep=" ", remove =TRUE)
 wide = pivot_wider(wide, names_from = n, values_from = c(z,M))
 #Convert back to long table format and split vars to get z-M indicator var
 long = pivot_longer(wide, cols = z_50:M_1000,
-                          names_to = c("type","n"), 
-                          names_sep = "_", 
-                          values_to = "bounds")
+                    names_to = c("type","n"), 
+                    names_sep = "_", 
+                    values_to = "bounds")
 #Convert one last time to wide table format for final format
 wide2=pivot_wider(long, names_from=n, values_from=bounds)
 #Split lower and upper proportions into separate columns
@@ -53,8 +56,8 @@ wide3=rbind(wide2, setNames(data.frame('ave', 'ave', 'z',
                                        sum(study1out[study1out$n==500,6])/nrow(study1out[study1out$n==500,]),
                                        sum(study1out[study1out$n==1000,4])/nrow(study1out[study1out$n==1000,]),
                                        sum(study1out[study1out$n==1000,6])/nrow(study1out[study1out$n==1000,])),
-                                       names(wide2))
-                                        )
+                            names(wide2))
+)
 wide3=rbind(wide3, setNames(data.frame('ave', 'ave', 'M',
                                        sum(study1out[study1out$n==50,5])/nrow(study1out[study1out$n==50,]),
                                        sum(study1out[study1out$n==50,7])/nrow(study1out[study1out$n==50,]),
@@ -69,7 +72,7 @@ wide3=rbind(wide3, setNames(data.frame('ave', 'ave', 'M',
                             names(wide2))
 )
 #Write table to .csv file
-write.table(wide3, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table1.csv",
+write.table(wide3, file = paste(filepath, "/MacKinnon2004Table1.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -84,7 +87,7 @@ write.table(wide3, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table1.csv",
 
 ##############################Table 2##############################
 #Read in .csv file
-study1=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon2004AccuracySummaryStudy1.csv")
+study1=read.csv(paste(filepath, "/MacKinnon2004AccuracySummaryStudy1.csv", sep =""))
 #Keep only nonzero cases from table in paper
 study1out=study1[study1$a!=0 & study1$b!=0 & study1$a <= study1$b,]
 #Remove ab column
@@ -153,7 +156,7 @@ wide3=rbind(wide3, setNames(data.frame('ave', 'ave', 'M',
                             names(wide2))
 )
 #Write table to .csv file
-write.table(wide3, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table2.csv",
+write.table(wide3, file = paste(filepath, "/MacKinnon2004Table2.csv", sep =""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -170,7 +173,7 @@ write.table(wide3, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table2.csv",
 
 ##############################Table 3##############################
 #Read in .csv file
-study2=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon200495PercentCIAccuracySummaryStudy2.csv")
+study2=read.csv(paste(filepath, "/MacKinnon200495PercentCIAccuracySummaryStudy2.csv", sep = ""))
 #Create dataframe that contains indicator var (=0 if ab is 0 and =1 if ab is nonzero)
 study2out=study2
 study2out$abind=ifelse(study2out$ab==0,0,1)
@@ -182,24 +185,24 @@ library(tidyverse)
 study2out1=study2out
 study2out1=unite(study2out,  col = abind_n, 18, 1, sep=" ", remove =TRUE) 
 study2out1 =  study2out1 %>% 
-              group_by(abind_n) %>% 
-              summarise(z.below.ave = mean(z.proportion.below),
-                        M.below.ave = mean(M.proportion.below),
-                        jackknife.below.ave = mean(jackknife.proportion.below),
-                        percentile.below.ave = mean(percentile.boot.proportion.below),
-                        bias.corrected.below.ave = mean(bias.corrected.boot.proportion.below),
-                        boot.t.below.ave = mean(boot.t.proportion.below),
-                        boot.Q.below.ave = mean(boot.Q.proportion.below),
-                        Monte.Carlo.below.ave = mean(Monte.Carlo.proportion.below),
-                        z.above.ave = mean(z.proportion.above),
-                        M.above.ave = mean(M.proportion.above),
-                        jackknife.above.ave = mean(jackknife.proportion.above),
-                        percentile.above.ave = mean(percentile.boot.proportion.above),
-                        bias.corrected.above.ave = mean(bias.corrected.boot.proportion.above),
-                        boot.t.above.ave = mean(boot.t.proportion.above),
-                        boot.Q.above.ave = mean(boot.Q.proportion.above),
-                        Monte.Carlo.above.ave = mean(Monte.Carlo.proportion.above)
-                        )
+  group_by(abind_n) %>% 
+  summarise(z.below.ave = mean(z.proportion.below),
+            M.below.ave = mean(M.proportion.below),
+            jackknife.below.ave = mean(jackknife.proportion.below),
+            percentile.below.ave = mean(percentile.boot.proportion.below),
+            bias.corrected.below.ave = mean(bias.corrected.boot.proportion.below),
+            boot.t.below.ave = mean(boot.t.proportion.below),
+            boot.Q.below.ave = mean(boot.Q.proportion.below),
+            Monte.Carlo.below.ave = mean(Monte.Carlo.proportion.below),
+            z.above.ave = mean(z.proportion.above),
+            M.above.ave = mean(M.proportion.above),
+            jackknife.above.ave = mean(jackknife.proportion.above),
+            percentile.above.ave = mean(percentile.boot.proportion.above),
+            bias.corrected.above.ave = mean(bias.corrected.boot.proportion.above),
+            boot.t.above.ave = mean(boot.t.proportion.above),
+            boot.Q.above.ave = mean(boot.Q.proportion.above),
+            Monte.Carlo.above.ave = mean(Monte.Carlo.proportion.above)
+  )
 
 #Combine proportions above and below z CI into a single var
 wide = unite(study2out1,  col = z, 2, 10, sep=" ", remove =TRUE) 
@@ -220,9 +223,9 @@ wide = unite(wide,  col = Monte.Carlo, 9, 10, sep=" ", remove =TRUE)
 
 #Separate the ab indicator/sample size variable into two variables
 wide=separate(wide,
-               col='abind_n',
-               sep=' ',
-               into=c("abind", "n"))
+              col='abind_n',
+              sep=' ',
+              into=c("abind", "n"))
 
 #Convert to wide table format to get z, M, etc. vars for each sample size
 wide = pivot_wider(wide, names_from = n, values_from = c(z, M, jackknife, percentile, bias.corrected, boot.t, boot.Q, Monte.Carlo))
@@ -256,7 +259,7 @@ wide2=wide2 %>%
   select(abind, type, `25 lower`, `25 upper`, `50 lower`, `50 upper`, `100 lower`, `100 upper`, `200 lower`, `200 upper`)
 
 #Write table to .csv file
-write.table(wide2, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table3.csv",
+write.table(wide2, file = paste(filepath, "/MacKinnon2004Table3.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -272,9 +275,9 @@ write.table(wide2, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table3.csv",
 
 ##############################Table 4##############################
 #Read in .csv files for 80%, 90%, and 95% CIs
-study2.80=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon200480PercentCIAccuracySummaryStudy2.csv")
-study2.90=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon200490PercentCIAccuracySummaryStudy2.csv")
-study2.95=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon200495PercentCIAccuracySummaryStudy2.csv")
+study2.80=read.csv(paste(filepath, "/MacKinnon200480PercentCIAccuracySummaryStudy2.csv", sep = ""))
+study2.90=read.csv(paste(filepath, "/MacKinnon200490PercentCIAccuracySummaryStudy2.csv", sep = ""))
+study2.95=read.csv(paste(filepath, "/MacKinnon200495PercentCIAccuracySummaryStudy2.csv", sep = ""))
 
 
 #Remove n, a, b, and ab columns
@@ -366,8 +369,8 @@ wide.95 = unite(wide.95,  col = Monte.Carlo, 8, 9, sep=" ", remove =TRUE)
 
 #Convert to long table format and split vars to get z, M, etc. indicator var
 long.80 = pivot_longer(wide.80, cols = 1:8,
-                    names_to = c("type"), 
-                    values_to = "bounds")
+                       names_to = c("type"), 
+                       values_to = "bounds")
 long.90 = pivot_longer(wide.90, cols = 1:8,
                        names_to = c("type"), 
                        values_to = "bounds")
@@ -377,9 +380,9 @@ long.95 = pivot_longer(wide.95, cols = 1:8,
 
 #Split lower and upper proportions into separate columns
 long2.80=separate(long.80,
-               col='bounds',
-               sep=' ',
-               into=c("Left80", "Right80"))
+                  col='bounds',
+                  sep=' ',
+                  into=c("Left80", "Right80"))
 long2.90=separate(long.90,
                   col='bounds',
                   sep=' ',
@@ -403,7 +406,7 @@ long3.80=rbind(long2.80, setNames(data.frame('Total',
                                              sum(long2.80[,3]),
                                              sum(long2.80[,4])),
                                   names(long2.80))
-                            
+               
 )
 long3.90=rbind(long2.90, setNames(data.frame('Total',
                                              sum(long2.90[,2]),
@@ -428,7 +431,7 @@ FinalTable4$RightOverall=apply(FinalTable4[,c(3, 6, 9)], 1, sum)
 FinalTable4$TotalOverall=apply(FinalTable4[,c(4, 7, 10)], 1, sum)
 
 #Write table to .csv file
-write.table(FinalTable4, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table4.csv",
+write.table(FinalTable4, file = paste(filepath, "/MacKinnon2004Table4.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -444,7 +447,7 @@ write.table(FinalTable4, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table4.c
 
 ##############################Table 5##############################
 #Read in .csv file
-study2reject=read.csv("C:/Users/tdtibbet/Desktop/MacKinnon2004RejectRateSummaryStudy2.csv")
+study2reject=read.csv(paste(filepath, "/MacKinnon2004RejectRateSummaryStudy2.csv", sep = ""))
 #Create dataframe that contains indicator var (=0 if ab is 0 and =1 if ab is nonzero)
 study2rejectout=study2reject
 study2rejectout$abind=ifelse(study2rejectout$ab==0,0,1)
@@ -469,9 +472,9 @@ study2rejectout1 =  study2rejectout1 %>%
 
 #Separate the ab indicator/sample size variable into two variables
 study2rejectout1=separate(study2rejectout1,
-              col='abind_n',
-              sep=' ',
-              into=c("abind", "n"))
+                          col='abind_n',
+                          sep=' ',
+                          into=c("abind", "n"))
 
 #Convert to wide table format to get z, M, etc. vars for each sample size
 wide = pivot_wider(study2rejectout1, names_from = n, values_from = c(z, M, jackknife, percentile, bias.corrected, boot.t, boot.Q, Monte.Carlo))
@@ -489,7 +492,7 @@ wide2=wide2 %>%
   select(abind, type, `25`, `50`, `100`, `200`)
 
 #Write table to .csv file
-write.table(wide2, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004Table5.csv",
+write.table(wide2, file = paste(filepath, "/MacKinnon2004Table5.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
