@@ -1,7 +1,10 @@
+#Create file path to use throughout code where you would like to output .csv files to
+##Get path directory where this script is saved using rstudioapi package
+filepath <- dirname(rstudioapi::getActiveDocumentContext()$path)
 #Use file.remove if you would like to delete the previously made .csv doc (so you can use the same name for new file)
-# file.remove("C:/Users/tdtibbet/Desktop/RMediationErrorsStudy1.csv")
-# file.remove("C:/Users/tdtibbet/Desktop/MacKinnon2004SummaryInformationStudy1.csv")
-# file.remove("C:/Users/tdtibbet/Desktop/MacKinnon2004AccuracySummaryStudy1.csv")
+# file.remove(paste(filepath, "/RMediationErrorsStudy1.csv", sep =""))
+# file.remove(paste(filepath, "/MacKinnon2004SummaryInformationStudy1.csv", sep =""))
+# file.remove(paste(filepath, "/MacKinnon2004AccuracySummaryStudy1.csv", sep =""))
 
 #Load required packages
 library(RMediation) #RMediation is required for medci() function
@@ -62,8 +65,8 @@ for (h in 1: length(ns)) {
       rmedCI=medci(mu.x=a, se.x=astderr, mu.y=b, se.y=bstderr, rho=0, alpha=alpha, type="dop")
       #If RMediation cannot calculate CI, output values that generated the error to .csv file and redo the iteration (otherwise proceed with sim)
       if (NA %in% rmedCI$`97.5% CI`) {
-        write.table(data.frame(n=ns[h], mu.x=a, se.x=astderr, mu.y=b, se.y=bstderr, rho=0, alpha=alpha), 
-                    file = "C:/Users/tdtibbet/Desktop/RMediationErrorsStudy1.csv",
+        write.table(data.frame(n=ns[h], mu.x=a, se.x=astderr, mu.y=b, se.y=bstderr, rho=0, alpha=alpha),
+                    file = paste(filepath,"/RMediationErrorsStudy1.csv", sep =""),
                     append=TRUE, sep = ",",
                     quote = FALSE,
                     row.names=FALSE,
@@ -82,7 +85,7 @@ for (h in 1: length(ns)) {
         #Place lower limit in first row of CI matrix and upper limit in second row
         CIlimits[1,1]=ab-1.96*abstderr
         CIlimits[2,1]=ab+1.96*abstderr
-
+        
         #Assess accuracy of CIs by seeing if true indirect effect is below lower limit or above upper limit
         for (j in 1:ncol(CIlimits)) {
           if (CIlimits[1,j]>as[k]*bs[k]) {
@@ -128,7 +131,7 @@ summaryinformation=as.data.frame(summaryinformation)
 colnames(summaryinformation)=c("n", "a", "b", "average sample a", "average sample b", 
                                "empirical standard error of sample a", "empirical standard error of sample b",
                                "average sample std error of a", "average sample std error of b")
-write.table(summaryinformation, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004SummaryInformationStudy1.csv",
+write.table(summaryinformation, file = paste(filepath,"/MacKinnon2004SummaryInformationStudy1.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
@@ -137,8 +140,8 @@ write.table(summaryinformation, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004S
 #Convert results matrix to dataframe and write to .csv file
 accursum=as.data.frame(accursum)
 colnames(accursum)=c("n", "a", "b", "ab", "z proportion below", "M proportion below", 
-                          "z proportion above", "M proportion above")
-write.table(accursum, file = "C:/Users/tdtibbet/Desktop/MacKinnon2004AccuracySummaryStudy1.csv",
+                     "z proportion above", "M proportion above")
+write.table(accursum, file = paste(filepath,"/MacKinnon2004AccuracySummaryStudy1.csv", sep = ""),
             append=TRUE, sep = ",",
             quote = FALSE,
             row.names=FALSE,
