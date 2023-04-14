@@ -32,11 +32,9 @@ include-before:
 
 ```{r setup, include = FALSE}
 # packages
-library(tidyverse)
+library(dplyr)
 library(knitr)
 library(xtable)
-library(RMediation)
-library(rstudioapi)
 
 # settings
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
@@ -60,6 +58,7 @@ This replication report documents the replication attempt of the simulation stud
 Following the definition of @rougier_sustainable_2017-1 we understand the replication of a published study as writing and running new code based on the description provided in the original publication with the aim of obtaining the same results.
 
 \section{Method}
+The R code used to run this simulation replication is available at [https://github.com/replisims/mackinnon-2004.git](https://github.com/replisims/mackinnon-2004.git).
 
 \subsection{Information basis}
 To complete this replication attempt, we utilized information from (1) the original article by @mackinnon04, (2) additional information in a book by @manly97, and (3) an R function in a package introduced in @tofighi11.

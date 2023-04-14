@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.2.19)  28 SEP 2021 00:39
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.2.19)  14 APR 2023 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -64,6 +64,7 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 ))
+\cslhangindent=\skip49
 \@input{defs.aux}
 \openout2 = `defs.aux'.
 
@@ -71,7 +72,7 @@ with kernel methods
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath
 .sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip50
 For additional information on amsmath, use the `?' option.
 
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext
@@ -125,8 +126,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \totwidth@=\dimen146
 \lineht@=\dimen147
 \@envbody=\toks18
-\multlinegap=\skip50
-\multlinetaggap=\skip51
+\multlinegap=\skip51
+\multlinetaggap=\skip52
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
@@ -137,8 +138,8 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \ar@mcellbox=\box49
 \extrarowheight=\dimen149
 \NC@list=\toks20
-\extratabsurround=\skip52
-\backup@length=\skip53
+\extratabsurround=\skip53
+\backup@length=\skip54
 \ar@cellbox=\box50
 )
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/bookta
@@ -168,12 +169,12 @@ Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count266
 \calc@Adimen=\dimen163
 \calc@Bdimen=\dimen164
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count267
-\calc@Cskip=\skip56
+\calc@Cskip=\skip57
 )
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic
 .sty
@@ -208,15 +209,15 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 dr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip57
-\f@nch@O@elh=\skip58
-\f@nch@O@erh=\skip59
-\f@nch@O@olh=\skip60
-\f@nch@O@orh=\skip61
-\f@nch@O@elf=\skip62
-\f@nch@O@erf=\skip63
-\f@nch@O@olf=\skip64
-\f@nch@O@orf=\skip65
+\f@nch@headwidth=\skip58
+\f@nch@O@elh=\skip59
+\f@nch@O@erh=\skip60
+\f@nch@O@olh=\skip61
+\f@nch@O@orh=\skip62
+\f@nch@O@elf=\skip63
+\f@nch@O@erf=\skip64
+\f@nch@O@olf=\skip65
+\f@nch@O@orf=\skip66
 )
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontspec/fontsp
 ec.sty
@@ -313,9 +314,9 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multir
 ow.sty
 Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
-\multirow@colwidth=\skip66
+\multirow@colwidth=\skip67
 \multirow@cntb=\count289
-\multirow@dima=\skip67
+\multirow@dima=\skip68
 \bigstrutjot=\dimen180
 )
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.
@@ -649,8 +650,8 @@ File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box63
-\beforetitleunit=\skip68
-\aftertitleunit=\skip69
+\beforetitleunit=\skip69
+\aftertitleunit=\skip70
 \ttl@plus=\dimen292
 \ttl@minus=\dimen293
 \ttl@toksa=\toks38
@@ -662,7 +663,7 @@ Package: titlesec 2019/10/16 v2.13 Sectioning titles
 bl.sty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks39
-\minrowclearance=\skip70
+\minrowclearance=\skip71
 ) (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -813,7 +814,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip71
+\Hy@SectionHShift=\skip72
 )
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pmboxdraw/pmbox
 draw.sty
@@ -832,7 +833,7 @@ Package: placeins 2005/04/18  v 2.2
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/enumitem/enumit
 em.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip72
+\labelindent=\skip73
 \enit@outerparindent=\dimen307
 \enit@toks=\toks40
 \enit@inbox=\box65
@@ -842,10 +843,10 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable
 .sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip73
-\LTright=\skip74
-\LTpre=\skip75
-\LTpost=\skip76
+\LTleft=\skip74
+\LTright=\skip75
+\LTpre=\skip76
+\LTpost=\skip77
 \LTchunksize=\count327
 \LTcapwidth=\dimen308
 \LT@head=\box66
@@ -940,7 +941,7 @@ anguage=dflt;mapping=tex-text;"
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-\myheight=\skip77
+\myheight=\skip78
 )
 
 LaTeX Warning: Unused global option(s):
@@ -949,99 +950,99 @@ LaTeX Warning: Unused global option(s):
 (./RepliSims-Replication-Report.aux)
 \openout1 = `RepliSims-Replication-Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-1.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+0.
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for pmboxdraw/pmboxdraw/m/n on input line
- 21.
-LaTeX Font Info:    ... okay on input line 21.
+ 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 21.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 21.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 21.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 21.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 21.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 21.
-LaTeX Font Info:    Redeclaring math accent \check on input line 21.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 21.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 21.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 21.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 21.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
+LaTeX Font Info:    Redeclaring math accent \check on input line 30.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 21.
+(Font)              `operators' in the math version `normal' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/Lato-Regular.ttf(0)/m/n on input lin
-e 21.
+e 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 21.
+(Font)              `operators' in the math version `bold' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/Lato-Regular.ttf(0)/m/n on input li
-ne 21.
+ne 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/Lato-Regular.ttf(0)/m/n --> TU/Lato-Regular.ttf(0)/m
-/n on input line 21.
+/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 (Font)                  OT1/cmr/m/it --> TU/Lato-Regular.ttf(0)/m/it on input l
-ine 21.
+ine 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/Lato-Regular.ttf(0)/b/n on input li
-ne 21.
+ne 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 21.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/UbuntuMono-Regular.ttf(0)/m/n on in
-put line 21.
+put line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/Lato-Regular.ttf(0)/m/n --> TU/Lato-Regular.ttf(0)/b
-/n on input line 21.
+/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/Lato-Regular.ttf(0)/b/it on input 
-line 21.
+line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 21.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/UbuntuMono-Regular.ttf(0)/b/n on in
-put line 21.
+put line 30.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1078,8 +1079,8 @@ put line 21.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 21.
-Package hyperref Info: Link coloring OFF on input line 21.
+(lastpage)             ! on input line 30.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (c:/Users/tdtibbet/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/namere
 f.sty
@@ -1095,16 +1096,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 (./RepliSims-Replication-Report.out) (./RepliSims-Replication-Report.out)
 \@outlinefile=\write4
 \openout4 = `RepliSims-Replication-Report.out'.
 
 
 LaTeX Font Warning: Font shape `TU/Lato-Black.ttf(0)/b/n' undefined
-(Font)              using `TU/Lato-Black.ttf(0)/m/n' instead on input line 33.
+(Font)              using `TU/Lato-Black.ttf(0)/m/n' instead on input line 42.
 
 [1
 
@@ -1112,8 +1113,18 @@ LaTeX Font Warning: Font shape `TU/Lato-Black.ttf(0)/b/n' undefined
 
 
 ]
-Overfull \hbox (1.197pt too wide) in paragraph at lines 106--108
-\TU/Lato-Regular.ttf(0)/m/n/10 levels|  
+Overfull \hbox (1.4212pt too wide) in paragraph at lines 126--127
+[]\TU/Lato-Regular.ttf(0)/m/n/10 No. lev- 
+ []
+
+
+Overfull \hbox (4.48468pt too wide) in alignment at lines 121--131
+ [] [] [] 
+ []
+
+
+Overfull \hbox (4.48468pt too wide) in alignment at lines 131--147
+ [] [] [] 
  []
 
 [2
@@ -1121,33 +1132,33 @@ Overfull \hbox (1.197pt too wide) in paragraph at lines 106--108
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 211.
+(hyperref)                removing `math shift' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 211.
+(hyperref)                removing `\alpha' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 211.
+(hyperref)                removing `math shift' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 211.
+(hyperref)                removing `math shift' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 211.
+(hyperref)                removing `\beta' on input line 158.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 211.
+(hyperref)                removing `math shift' on input line 158.
 
-[3] [4]
+[3]
 LaTeX Font Info:    Font shape `TU/UbuntuMono-Regular.ttf(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 290.
+(Font)              scaled to size 8.99994pt on input line 237.
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 []\TU/UbuntuMono-Regular.ttf(0)/m/n/10 Solve Equations 1 and 2 to find the ordi
 nary least squares estimators of $\OML/cmm/m/it/10 ^^K$ \TU/UbuntuMono-Regular.
 ttf(0)/m/n/10 (i.e., $\OML/cmm/m/it/10 a$\TU/UbuntuMono-Regular.ttf(0)/m/n/10 )
@@ -1155,81 +1166,82 @@ ttf(0)/m/n/10 (i.e., $\OML/cmm/m/it/10 a$\TU/UbuntuMono-Regular.ttf(0)/m/n/10 )
 mm/m/it/10 b$\TU/UbuntuMono-Regular.ttf(0)/m/n/10 )
  []
 
+[4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 321.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 321.
+(hyperref)                removing `math shift' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 333.
+(hyperref)                removing `math shift' on input line 268.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 333.
+(hyperref)                removing `math shift' on input line 280.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 280.
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 348.
+(hyperref)                removing `math shift' on input line 295.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 348.
+(hyperref)                removing `math shift' on input line 295.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 394.
+(hyperref)                removing `math shift' on input line 341.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 394.
+(hyperref)                removing `math shift' on input line 341.
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 355.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 355.
 
 [7] [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+(hyperref)                removing `math shift' on input line 501.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+(hyperref)                removing `math shift' on input line 501.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+(hyperref)                removing `math shift' on input line 501.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
+(hyperref)                removing `math shift' on input line 501.
 
 [9] [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 674.
+(hyperref)                removing `math shift' on input line 578.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 674.
+(hyperref)                removing `math shift' on input line 578.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 691.
+(hyperref)                removing `math shift' on input line 595.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 691.
+(hyperref)                removing `math shift' on input line 595.
 
 [11] [12]
 File: RepliSimsTable1.png Graphic file (type bmp)
@@ -1266,14 +1278,17 @@ File: RepliSimsMacKinnonTable4.png Graphic file (type bmp)
 ]
 File: RepliSimsTable5.PNG Graphic file (type bmp)
 <RepliSimsTable5.PNG>
+
+LaTeX Warning: Float too large for page by 29.83441pt on input line 776.
+
 File: RepliSimsMacKinnonTable5.png Graphic file (type bmp)
 <RepliSimsMacKinnonTable5.png>
 [25] [26] [27
 
 
-] [28] [29] [30] [31] [32] 
+] [28] [29] [30] 
 AED: lastpage setting LastPage
-[33] (./RepliSims-Replication-Report.aux)
+[31] (./RepliSims-Replication-Report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1282,12 +1297,12 @@ anged.
 (rerunfilecheck)             Checksum: 5F66E529B7801FE0D76DDB61EF134307;6170.
  ) 
 Here is how much of TeX's memory you used:
- 23188 strings out of 478931
- 471367 string characters out of 5865140
- 845045 words of memory out of 5000000
- 42600 multiletter control sequences out of 15000+600000
+ 23191 strings out of 478931
+ 471409 string characters out of 5865140
+ 847052 words of memory out of 5000000
+ 42603 multiletter control sequences out of 15000+600000
  407934 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,12n,94p,454b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RepliSims-Replication-Report.pdf (33 pages).
+Output written on RepliSims-Replication-Report.pdf (31 pages).
